@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>Movies</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>loginPage</servlet-name>
+    <servlet-class>signup.Login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginPage</servlet-name>
+    <url-pattern>/login/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>signinPage</servlet-name>
+    <servlet-class>signup.SignUp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>signinPage</servlet-name>
+    <url-pattern>/signup/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>loaderPage</servlet-name>
+    <servlet-class>dataloader.Loader</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loaderPage</servlet-name>
+    <url-pattern>/loader/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>movieDeletePage</servlet-name>
+    <servlet-class>dataloader.Delete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>movieDeletePage</servlet-name>
+    <url-pattern>/delete/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>movieUpdatePage</servlet-name>
+    <servlet-class>dataloader.Update</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>movieUpdatePage</servlet-name>
+    <url-pattern>/update/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>javax.ws.rs.core.Application</servlet-name>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>javax.ws.rs.core.Application</servlet-name>
+    <url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+</web-app>
